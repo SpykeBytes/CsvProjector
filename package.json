@@ -1,0 +1,36 @@
+{
+  "name": "CsvProjector",
+  "version": "0.1.0",
+  "description": "Take CSV files and configure mapping functions to mutate and project into JSON",
+  "main": "lib/projector.js", 
+  "bin": { 
+    "projecto": "lib/projector.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SpykeBytes/CsvProjector.git"
+  },
+  "keywords": [
+    "csv",
+    "json",
+    "mutate",
+    "project",
+    "convert",
+    "map",
+    "mapping",
+    "mutating",
+    "mutator"
+  ],
+  "author": "Colin Higgins <colin@spykebytes.me>",
+  "license": "ASL",
+  "bugs": {
+    "url": "https://github.com/SpykeBytes/CsvProjector/issues"
+  },
+  "homepage": "https://github.com/SpykeBytes/CsvProjector",
+  "dependencies": {
+    "csvtojson": "~0.3.18"
+  }
+}
