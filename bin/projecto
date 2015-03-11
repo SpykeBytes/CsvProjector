@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+var docopt = require('docopt');
+var projector = require('CsvProjector');
+
+var doc = [
+  'Usage:',
+  '  projecto <file> [--profile=<mutation-profile>]',
+  '  projecto profiles',
+  '  projecto (--help | --version)',
+  '',
+  'Options:',
+  '  --help                            Show this text',
+  '  --version                         Show CsvProjector version info',
+  '  -p --profile=<mutation-profile>   The profile to use [default: default]',
+  '',
+  'Commands:',
+  '  profiles                          List all the available profiles',
+].join('\r\n');
+
+var args = docopt.docopt(doc, {
+  help: true,
+  version: 'projecto ' + require('../package.json').version,
+});
+
+if(args['profiles']){
+  for(var name in projector.profiles){
+    description = projector.profiles[name].description || '';
+    console.log(name, '\t', description);
+  }
+} else {
+  var fileName = args['<file>'];
+  var profileName = args['--profile'];
+  projector.project(fileName, profileName);
+}

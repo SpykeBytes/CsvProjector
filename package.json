@@ -2,9 +2,9 @@
   "name": "CsvProjector",
   "version": "0.1.0",
   "description": "Take CSV files and configure mapping functions to mutate and project into JSON",
-  "main": "lib/projector.js", 
-  "bin": { 
-    "projecto": "lib/projector.js"
+  "main": "lib/index.js",
+  "bin": {
+    "projecto": "bin/projecto"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
